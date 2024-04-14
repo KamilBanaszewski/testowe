@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak schudnąć</title>
+    <link rel ="stylesheet" href = "style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="img/bmi.jpg">
+        </header>
+
+        <nav>
+            <a class="menu active" href="index.html">Strona główna</a>
+            <a class="menu" href="sport.html">Sport</a>
+            <a class="menu" href="zywnosc.html">Zdrowa żywność</a>
+            <a class="menu" href="woda.html">Spożycie wody</a>
+            <a class="menu" href="sen.html">Sen i regeneracja</a>
+            <a class="menu" href="kalkulator.html">Kalkulator zdrowia</a>
+        </nav>
+
+        <section>
+            <article>                   
+                <h1>Zdrowe Odchudzanie: Zdrowe Obliczanie</h1>
+                <h2>Co to jest BMI?</h2>
+                <p>
+                    BMI (Body Mass Index) to wskaźnik, który służy do oceny proporcji między masą ciała a wzrostem.
+                     Jest obliczany dzięki podzieleniu masy ciała (w kilogramach) przez kwadrat wzrostu (w metrach). 
+                    Pozwala na ogólne określenie, czy masa ciała osoby jest w granicach prawidłowych, niedowagi, nadwagi czy otyłości.
+                </p>
+            </article>  
+
+            <article>
+                <h2>Do czego służy BMI?</h2>
+                <p>
+                    BMI służy do oceny proporcji między masą ciała a wzrostem oraz do ogólnej klasyfikacji stanu odżywienia człowieka.
+                    Pomaga lekarzom i innym specjalistom zdrowia w diagnozowaniu problemów związanych z wagą ciała, takich jak niedowaga, nadwaga czy otyłość. Może być także używany do monitorowania postępów w procesie odchudzania lub przyrostu masy ciała.
+                </p>
+            </article>
+
+            <article>
+                <h2>Policz swoje BMI</h2>
+                <div class="bg-calc">
+                    <div class="kalkulator">
+                            <p>Wprowadź swoje dane:</p>
+                            <label for="weight">Waga (kg): </label>
+                            <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+                            <label for="height">Wzrost (cm): </label>
+                            <input type="number" id="height" name="height" step="0.1" required><br><br>
+                            <label for="age">Wiek: </label>
+                            <input type="number" id="age" name="age" required><br><br>
+                            <button onclick="calculateBMI()">Oblicz BMI</button>
+                            <p id="WynikBMI"></p>
+                            <p id="BMIresult"></p>
+
+                            <script src="app.js"></script>             
+                    </div>
+                </div>
+            </article>
+        <footer>
+            <div id="stopka">
+                <div class="one">
+                    <h2>Skontaktuj się z nami</h2>
+                    <p>
+                        Chętnie odpowiemy na Twoje pytania</br>
+                        oraz pomożemy Ci wybrać</br>
+                        odpowiednią dietę.
+                    </p>
+                </div>
+
+                <div class="two">
+                    <h4>Zadzwoń:</h4>
+                    <p>
+                        123 456 789
+                    </p>
+
+                    <p>
+                        123 456 789
+                    </p>
+
+                    <h4>Napisz:</h4>
+                    <p>
+                        jakschudnac@help.pl
+                    </p>
+                </div>
+
+                <div class="three">
+                    <a link href="Kampus Vizja Park, Okopowa 59, 01-043 Warszawa">Okopowa 59</a>
+                    <p>PON-PT: 8:00 - 16:00</p>
+                    <p>SOBOTA: 8:00 - 14:00</p>
+                </div>                
+            </div>
+            <p class="prawa">&copy; 2024 Strona Jak schudnąć. Wszelkie prawa zastrzeżone.</p>            
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jak schudnąć</title>
+    <link rel ="stylesheet" href = "style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="img/sport.jpg">
+        </header>
+
+        <nav>
+            <a class="menu active" href="index.html">Strona główna</a>
+            <a class="menu" href="sport.html">Sport</a>
+            <a class="menu" href="zywnosc.html">Zdrowa żywność</a>
+            <a class="menu" href="woda.html">Spożycie wody</a>
+            <a class="menu" href="sen.html">Sen i regeneracja</a>
+            <a class="menu" href="kalkulator.html">Kalkulator zdrowia</a>
+        </nav>
+
+        <section>
+            <article>                   
+                <h1>Zdrowe Odchudzanie: Ruchowe atrakcje</h1>
+                <p>
+                    Sport to kluczowy element zdrowego stylu życia. </br>
+                    Regularna aktywność fizyczna nie tylko poprawia kondycję fizyczną, ale także wpływa pozytywnie na samopoczucie i zdrowie psychiczne. </br>
+                    Niezależnie od preferowanej dyscypliny czy poziomu zaawansowania, każdy ruch to krok w stronę lepszej formy i energii.</br>
+                    <b>Zacznij już dziś i poczuj różnicę!</b>
+                </p>
+            </article>
+        </section>
+
+        
+            <div class="gif">
+                <img src="img/ruch.gif">
+            </div>
+
+            <div class="lista">
+                <button class="lista-btn" onclick="toggleLista()">Wybierz sport</button>
+                <div class="lista-content">
+                    <a href="javascript:void(0)" onclick="showInfo('Pływanie')">Pływanie</a>
+                    <a href="javascript:void(0)" onclick="showInfo('Bieganie')">Bieganie</a>
+                    <a href="javascript:void(0)" onclick="showInfo('Joga')">Joga</a>
+                    <a href="javascript:void(0)" onclick="showInfo('Zumba')">Zumba</a>
+                    <a href="javascript:void(0)" onclick="showInfo('Rower')">Rower</a>
+                    <a href="javascript:void(0)" onclick="showInfo('Taniec')">Taniec</a>
+                </div>
+            </div>
+        
+            <div id="sport-info"></div>
+        
+            <script>
+
+                var img = {
+                    'Pływanie': 'img/plywanie.gif',
+                    'Bieganie': 'https://via.placeholder.com/150',
+                    'Joga': 'https://via.placeholder.com/150',
+                    'Zumba': 'https://via.placeholder.com/150',
+                    'Rower': 'https://via.placeholder.com/150',
+                    'Taniec': 'https://via.placeholder.com/150'
+                };
+
+                function toggleLista() {
+                    var lista = document.querySelector('.lista');
+                    lista.classList.toggle('active');
+                }
+              
+                function showInfo(sport) {
+                    var infoArea = document.getElementById('sport-info');
+                    var info = '';
+        
+                    if (sport === 'Pływanie') {
+                        info = 'Pływanie to doskonały sport, który angażuje wiele mięśni ciała jednocześnie. Regularne pływanie pomaga spalać kalorie, wzmacnia mięśnie, poprawia wydolność serca i płuc oraz kształtuje sylwetkę.';
+                    } else if (sport === 'Bieganie') {
+                        info = 'Bieganie jest skutecznym sposobem na utratę zbędnych kilogramów i utrzymanie smukłej sylwetki. Regularne bieganie pozwala spalić wiele kalorii, poprawia wydolność serca i wzmacnia mięśnie nóg.';
+                    } else if (sport === 'Joga') {
+                        info = 'Joga to nie tylko forma aktywności fizycznej, ale również praktyka mindfulness, która pomaga w redukcji stresu i poprawie samopoczucia. Ćwiczenia jogi angażują różne partie mięśniowe, wzmacniają ciało i poprawiają elastyczność.';
+                    } else if (sport === 'Zumba') {
+                        info = 'Zumba to energetyczna forma ćwiczeń oparta na tańcu, która pozwala spalić wiele kalorii i poprawić kondycję. Tańce wykonywane podczas zajęć zumbowych angażują całe ciało, zapewniając efektywny trening aerobowy.';
+                    } else if (sport === 'Rower') {
+                        info = 'Rower to doskonała forma aktywności fizycznej, która nie tylko pozwala na utrzymanie smukłej sylwetki, ale również wzmacnia mięśnie nóg i poprawia wydolność serca i płuc.';
+                    } else if (sport === 'Taniec') {
+                        info = 'Taniec to nie tylko przyjemna forma spędzania czasu, ale również skuteczny sposób na utrzymanie smukłej sylwetki. Różne style tańca angażują różne partie mięśni, zapewniając kompleksowy trening fizyczny.';
+                    }
+        
+                    infoArea.innerHTML = '<div class="sport-description"><h3>' + sport + '</h3><p>' + info + '</p></div>';
+                    
+                    var imgSrc = img[sport] || '';
+                    infoArea.innerHTML = '<div class="sport-description"><h3>' + sport + '</h3><p>' + info + '</p><img id="sport-img" src="' + imgSrc + '" alt="Obrazek sportu"></div>';
+        
+                }
+            </script>
+
+
+        <footer>
+            <a class="menu" href="kontakt.html">Kontakt</a>
+            <a class="menu" href="onas.html">O nas</a>
+        </footer>
+    </div>
+
+</body>
+</html>
